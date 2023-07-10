@@ -7,11 +7,11 @@ import Foundation
 class HTTPServer{
 	internal init(_ serverConfiguration:(host:String,port:Int) = ("0.0.0.0",8888)) {        
 		self._agroupThreads = MultiThreadedEventLoopGroup(numberOfThreads: 1)
-        self.configuration = serverConfiguration
+        self.configuration = serverConfiguration            
 		self._nativeServer = ServerBootstrap(group: self._agroupThreads)
             .serverChannelOption(ChannelOptions.backlog, value: 256)
             .serverChannelOption(ChannelOptions.socketOption(.so_reuseaddr), value: 1).childChannelInitializer { channel in
-    			let httpHandler = HTTPHandler()
+    			let httpHandler = RouterHandler()
         		let config: NIOHTTPServerUpgradeConfiguration = (
                 	upgraders: [  ],
                 	completionHandler: { _ in

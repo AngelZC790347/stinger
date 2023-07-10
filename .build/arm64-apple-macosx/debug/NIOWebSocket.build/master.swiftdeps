@@ -1,0 +1,20 @@
+version: "Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)"
+options: "144117803b867282dddd08660383a9a7198a9352407b93cc595816a1fda7bd32"
+build_start_time: [1688939678, 728333950]
+build_end_time: [1688939679, 48530101]
+inputs:
+  "/Users/angelzuniga/Documents/XcodeProjects/stinger/.build/checkouts/swift-nio/Sources/NIOWebSocket/Base64.swift": [1688939667, 673629760]
+  ? "/Users/angelzuniga/Documents/XcodeProjects/stinger/.build/checkouts/swift-nio/Sources/NIOWebSocket/NIOWebSocketClientUpgrader.swift"
+  : [1688939667, 673837184]
+  ? "/Users/angelzuniga/Documents/XcodeProjects/stinger/.build/checkouts/swift-nio/Sources/NIOWebSocket/NIOWebSocketFrameAggregator.swift"
+  : [1688939667, 674110889]
+  ? "/Users/angelzuniga/Documents/XcodeProjects/stinger/.build/checkouts/swift-nio/Sources/NIOWebSocket/NIOWebSocketServerUpgrader.swift"
+  : [1688939667, 674582004]
+  "/Users/angelzuniga/Documents/XcodeProjects/stinger/.build/checkouts/swift-nio/Sources/NIOWebSocket/SHA1.swift": [1688939667, 674702644]
+  "/Users/angelzuniga/Documents/XcodeProjects/stinger/.build/checkouts/swift-nio/Sources/NIOWebSocket/WebSocketErrorCodes.swift": [1688939667, 674824237]
+  "/Users/angelzuniga/Documents/XcodeProjects/stinger/.build/checkouts/swift-nio/Sources/NIOWebSocket/WebSocketFrame.swift": [1688939667, 674942493]
+  "/Users/angelzuniga/Documents/XcodeProjects/stinger/.build/checkouts/swift-nio/Sources/NIOWebSocket/WebSocketFrameDecoder.swift": [1688939667, 675074100]
+  "/Users/angelzuniga/Documents/XcodeProjects/stinger/.build/checkouts/swift-nio/Sources/NIOWebSocket/WebSocketFrameEncoder.swift": [1688939667, 675207376]
+  "/Users/angelzuniga/Documents/XcodeProjects/stinger/.build/checkouts/swift-nio/Sources/NIOWebSocket/WebSocketOpcode.swift": [1688939667, 675313711]
+  ? "/Users/angelzuniga/Documents/XcodeProjects/stinger/.build/checkouts/swift-nio/Sources/NIOWebSocket/WebSocketProtocolErrorHandler.swift"
+  : [1688939667, 675398349]

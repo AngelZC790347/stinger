@@ -1,0 +1,6 @@
+version: "Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)"
+options: "42dceb42b5a2d69160c3d7d18aac40c7d6a0cd526ae62d5186f05799828f95d7"
+build_start_time: [1688941109, 481102943]
+build_end_time: [1688941109, 721498966]
+inputs:
+  "/Users/angelzuniga/Documents/XcodeProjects/stinger/Tests/stingerTests/stingerTests.swift": [1688940968, 955822467]

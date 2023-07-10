@@ -1,0 +1,4 @@
+module CNIOAtomics {
+    umbrella header "/Users/angelzuniga/Documents/XcodeProjects/stinger/.build/checkouts/swift-nio/Sources/CNIOAtomics/include/CNIOAtomics.h"
+    export *
+}

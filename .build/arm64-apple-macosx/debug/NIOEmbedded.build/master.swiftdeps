@@ -1,0 +1,8 @@
+version: "Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)"
+options: "3df80621787ad994c40bd96bea2806727381cc3a51c506436d6d480ed5b6ebe0"
+build_start_time: [1688939676, 635715007]
+build_end_time: [1688939677, 203479051]
+inputs:
+  "/Users/angelzuniga/Documents/XcodeProjects/stinger/.build/checkouts/swift-nio/Sources/NIOEmbedded/AsyncTestingChannel.swift": [1688939667, 654726982]
+  "/Users/angelzuniga/Documents/XcodeProjects/stinger/.build/checkouts/swift-nio/Sources/NIOEmbedded/AsyncTestingEventLoop.swift": [1688939667, 655077695]
+  "/Users/angelzuniga/Documents/XcodeProjects/stinger/.build/checkouts/swift-nio/Sources/NIOEmbedded/Embedded.swift": [1688939667, 655434608]

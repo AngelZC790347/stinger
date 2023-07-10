@@ -4,5 +4,5 @@ public struct stinger {
     public static func main(){            
          let app = Application()
          app.run()
-    }
+    }    
 }

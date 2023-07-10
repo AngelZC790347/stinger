@@ -20,6 +20,8 @@ let package = Package(
                .product(name: "NIOWebSocket", package: "swift-nio")]),
         .testTarget(
             name: "stingerTests",
-            dependencies: ["stinger"]),
+            dependencies: [
+                "stinger",
+            ]),
     ]
 )

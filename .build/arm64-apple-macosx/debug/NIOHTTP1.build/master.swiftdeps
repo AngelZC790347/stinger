@@ -1,0 +1,18 @@
+version: "Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)"
+options: "0cfa19b743e61dcb18dd168c19a7b59fbb4ae98b121ea77b052a6c314e47e7e0"
+build_start_time: [1688939678, 169991016]
+build_end_time: [1688939678, 687525987]
+inputs:
+  "/Users/angelzuniga/Documents/XcodeProjects/stinger/.build/checkouts/swift-nio/Sources/NIOHTTP1/ByteCollectionUtils.swift": [1688939667, 656441450]
+  "/Users/angelzuniga/Documents/XcodeProjects/stinger/.build/checkouts/swift-nio/Sources/NIOHTTP1/HTTPDecoder.swift": [1688939667, 656770706]
+  "/Users/angelzuniga/Documents/XcodeProjects/stinger/.build/checkouts/swift-nio/Sources/NIOHTTP1/HTTPEncoder.swift": [1688939667, 656982183]
+  "/Users/angelzuniga/Documents/XcodeProjects/stinger/.build/checkouts/swift-nio/Sources/NIOHTTP1/HTTPHeaderValidator.swift": [1688939667, 657076358]
+  "/Users/angelzuniga/Documents/XcodeProjects/stinger/.build/checkouts/swift-nio/Sources/NIOHTTP1/HTTPHeaders+Validation.swift": [1688939667, 657164573]
+  "/Users/angelzuniga/Documents/XcodeProjects/stinger/.build/checkouts/swift-nio/Sources/NIOHTTP1/HTTPPipelineSetup.swift": [1688939667, 657354593]
+  "/Users/angelzuniga/Documents/XcodeProjects/stinger/.build/checkouts/swift-nio/Sources/NIOHTTP1/HTTPServerPipelineHandler.swift": [1688939667, 657530069]
+  ? "/Users/angelzuniga/Documents/XcodeProjects/stinger/.build/checkouts/swift-nio/Sources/NIOHTTP1/HTTPServerProtocolErrorHandler.swift"
+  : [1688939667, 657621622]
+  "/Users/angelzuniga/Documents/XcodeProjects/stinger/.build/checkouts/swift-nio/Sources/NIOHTTP1/HTTPServerUpgradeHandler.swift": [1688939667, 657772541]
+  "/Users/angelzuniga/Documents/XcodeProjects/stinger/.build/checkouts/swift-nio/Sources/NIOHTTP1/HTTPTypes.swift": [1688939667, 658223628]
+  "/Users/angelzuniga/Documents/XcodeProjects/stinger/.build/checkouts/swift-nio/Sources/NIOHTTP1/NIOHTTPClientUpgradeHandler.swift": [1688939667, 658407211]
+  "/Users/angelzuniga/Documents/XcodeProjects/stinger/.build/checkouts/swift-nio/Sources/NIOHTTP1/NIOHTTPObjectAggregator.swift": [1688939667, 658553600]
