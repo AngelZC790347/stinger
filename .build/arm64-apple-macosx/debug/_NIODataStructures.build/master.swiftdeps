@@ -1,7 +1,0 @@
-version: "Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)"
-options: "c3a8068baa9760becbb2cdebe551ebcca7a3b668cc54070e395556fd975b113b"
-build_start_time: [1688939671, 445622920]
-build_end_time: [1688939673, 87634086]
-inputs:
-  "/Users/angelzuniga/Documents/XcodeProjects/stinger/.build/checkouts/swift-nio/Sources/_NIODataStructures/Heap.swift": [1688939667, 676326513]
-  "/Users/angelzuniga/Documents/XcodeProjects/stinger/.build/checkouts/swift-nio/Sources/_NIODataStructures/PriorityQueue.swift": [1688939667, 676443576]

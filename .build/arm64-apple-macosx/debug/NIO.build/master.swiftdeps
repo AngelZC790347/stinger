@@ -1,6 +1,0 @@
-version: "Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)"
-options: "5b221a3e0d2c985400610cfd92ebf15d5b31b42b5be6978cfa4ff13530182e77"
-build_start_time: [1688939678, 37374019]
-build_end_time: [1688939678, 132827043]
-inputs:
-  "/Users/angelzuniga/Documents/XcodeProjects/stinger/.build/checkouts/swift-nio/Sources/NIO/Exports.swift": [1688939667, 637262344]

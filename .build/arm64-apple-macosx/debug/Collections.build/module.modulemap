@@ -1,4 +1,0 @@
-module Collections {
-    header "/Users/angelzuniga/Documents/XcodeProjects/stinger/.build/arm64-apple-macosx/debug/Collections.build/Collections-Swift.h"
-    requires objc
-}
