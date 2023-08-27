@@ -8,7 +8,7 @@ RUN apt-get update && apt-get -y install curl
 RUN git config --global --add safe.directory '*'
 WORKDIR ./stinger
 COPY ./Package.* ./
-EXPOSE 8888
+EXPOSE 3000
 RUN swift package resolve
 COPY . .
 # RUN swift build

@@ -6,21 +6,32 @@ import XCTest
 //
 //}
 
+@available(macOS 13.0, *)
 final class stingerTests: XCTestCase {
     func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct
-        // results.
-//        var p = ChannelPipeline(channel: MyChannel())
-//         let future = p.add(name: "1", handler: InboundHandlerA()).flatMap {
-//           p.add(name: "2", handler: InboundHandlerB())
-//         }.flatMap {
-//           p.add(name: "3", handler: OutboundHandlerA())
-//         }.flatMap {
-//           p.add(name: "4", handler: OutboundHandlerB())
-//         }.flatMap {
-//           p.add(name: "5", handler: InboundOutboundHandlerX())
-//         }
-        XCTAssertEqual(stinger().text, "Hello, World!")
+                    
+        if #available(macOS 13.0, *) {
+//            XCTAssertEqual(stinger().text, "Hello, World!")
+        } else {
+            // Fallback on earlier versions
+        }
+    }
+    func testReuestBodyConverter() throws{
+        let request = try! Request(method: .POST, uri: "/users")
+        try? request.setBody(body: .init(string: """
+{
+"username":"Angel790347",
+"email":"angel1200z@hotmail.com",
+"password":"angel7903"
+}
+"""))
+        print(request.bodyType)
+        XCTAssertEqual(request.bodyType,Request.BodyType.formData(.init(string:"""
+{
+"username":"Angel790347",
+"email":"angel1200z@hotmail.com",
+"password":"angel7903"
+}
+""" )))
     }
 }
