@@ -8,7 +8,6 @@
 import Foundation
 import NIOHTTP1
 
-@available(macOS 13.0, *)
 public final class Route:Hashable{
     public static func == (lhs: Route, rhs: Route) -> Bool {
         return lhs.path.string == rhs.path.string

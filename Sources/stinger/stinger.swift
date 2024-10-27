@@ -1,7 +1,7 @@
 import NIO
 import NIOHTTP1
 import Foundation
-@available(macOS 13.0, *)
+
 @main
 public struct stinger {    
     public static func main(){
@@ -17,6 +17,7 @@ public struct stinger {
                 Response(resposeType: .json, body: .init(string: "{username:Angel}"))
             }            
             try app.listen(config:ApplicationConfiguration(addr: .Bind(host: "0.0.0.0", port: 3000)))
+            
                         
         }catch{
             print(error.localizedDescription)

@@ -5,6 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "stinger",
+    platforms: [.macOS(.v13)],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         .package(url:"https://github.com/apple/swift-nio.git", from: "2.0.0"),

@@ -10,7 +10,7 @@ import NIOCore
 import NIOPosix
 import NIOHTTP1
 
-@available(macOS 13.0, *)
+
 public struct ApplicationConfiguration{
     enum Addr{
         case Bind(host:String,port:Int)
@@ -19,7 +19,7 @@ public struct ApplicationConfiguration{
     }
     let addr:Addr
 }
-@available(macOS 13.0, *)
+
 class Application{
     var router:Router
    

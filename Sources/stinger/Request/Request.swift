@@ -7,7 +7,7 @@
 import NIOCore
 import NIOHTTP1
 import Foundation
-@available(macOS 13.0, *)
+
 class Request:CustomStringConvertible{
     var description: String{
         return "\(method.rawValue)->"+uri
@@ -77,7 +77,7 @@ class Request:CustomStringConvertible{
     
 }
 
-@available(macOS 13.0, *)
+
 extension Request{
     internal class Body:CustomStringConvertible{
         public var data:ByteBuffer?{

@@ -6,14 +6,14 @@
 //
 
 import Foundation
-@available(macOS 13.0, *)
+
 extension String {
     /// Converts a string into `[PathComponent]`.
     public var pathComponents: [PathComponent] {
         return self.split(separator: "/").map { .init(stringLiteral: .init($0)) }
     }
 }
-@available(macOS 13.0, *)
+
 public enum PathComponent:ExpressibleByStringInterpolation,CustomStringConvertible{
     case constant(String)
     case parameter(String)
@@ -47,7 +47,7 @@ public enum PathComponent:ExpressibleByStringInterpolation,CustomStringConvertib
     
 }
 
-@available(macOS 13.0, *)
+
 extension Sequence where Element == PathComponent {
     /// Converts an array of `PathComponent` into a readable path string.
     ///

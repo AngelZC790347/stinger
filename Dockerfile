@@ -1,4 +1,4 @@
-FROM swift:5.8-jammy
+FROM swift:6.0-jammy
 
 RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true \
     && apt-get update && apt-get install -y \

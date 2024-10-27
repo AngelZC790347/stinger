@@ -8,7 +8,7 @@
 import Foundation
 import NIO
 import NIOHTTP1
-@available(macOS 13.0, *)
+
 class RequestDecoder:ChannelInboundHandler{
     typealias InboundIn = HTTPServerRequestPart
     typealias InboundOut = Request
