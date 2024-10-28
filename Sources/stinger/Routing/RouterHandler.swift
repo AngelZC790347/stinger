@@ -24,7 +24,7 @@ internal protocol RouterHandler{
 }
 
 extension RouterHandler{
-    mutating func add(route:Route){
+    mutating func add(route:Route){    
         routes[route.method]?.append(route)
     }
     mutating func get(_ path:String,_ action:@escaping httpAction){
@@ -33,6 +33,7 @@ extension RouterHandler{
     mutating func post(_ path:String,_ action:@escaping httpAction){
         add(route: Route(method: .POST, path: path.pathComponents,action:action))
     }
+    
 }
 
 public class Controller:RouterHandler{

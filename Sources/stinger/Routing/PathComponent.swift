@@ -14,7 +14,7 @@ extension String {
     }
 }
 
-public enum PathComponent:ExpressibleByStringInterpolation,CustomStringConvertible{
+public enum PathComponent:ExpressibleByStringInterpolation,CustomStringConvertible,Hashable{
     case constant(String)
     case parameter(String)
     case anything
@@ -53,6 +53,24 @@ extension Sequence where Element == PathComponent {
     ///
     ///     galaxies/:galaxyID/planets
     ///
+    ///
+    public func match(path:[PathComponent]) -> Bool{
+        let components = Array(self)
+        if path.count != components.count{
+            return false
+        }
+        for (p,c) in zip(path, components) {
+            switch c {
+            case .constant(let constant):
+                if p.description != constant {
+                    return false
+                }
+            default:
+                break
+            }            
+        }
+        return true
+    }
     public var string: String {
         return self.map(\.description).joined(separator: "/")
     }

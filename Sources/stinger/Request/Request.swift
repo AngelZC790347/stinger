@@ -50,7 +50,7 @@ class Request:CustomStringConvertible{
     public var method:HTTPMethod
     public var uri:String
     public var parameter :[String:String] = [:]
-    private var body:Body{
+    public var body:Body{
         return Body(self)
     }
     func setBody(body:ByteBuffer){

@@ -50,7 +50,7 @@ private func httpResponseHead(request: HTTPRequestHead, status: HTTPResponseStat
     return head
 }
 
-@available(macOS 13.0, *)
+
 final class RoutingHandler: ChannelInboundHandler {
     public typealias InboundIn = Request
     public typealias InboundOut = Response
@@ -61,13 +61,8 @@ final class RoutingHandler: ChannelInboundHandler {
     }
 
     func channelRead(context: ChannelHandlerContext, data: NIOAny) {
-        let req = self.unwrapInboundIn(data)
-        print(req)
-        print(app.router.routes)
-        let route = app.router.routes[req.method]?.first(where: { route in
-            "/" + route.path.string == req.uri
-        })
-        print(route)
+        let req = self.unwrapInboundIn(data)        
+        let route = app.getRouteByRequest(req)
         guard let action = route?._action else {
             context.fireChannelRead(self.wrapInboundOut(Response(resposeType:.empty,body: .init(string: "Not Found") )))
             return
@@ -77,3 +72,29 @@ final class RoutingHandler: ChannelInboundHandler {
 }
 
 
+extension Router {
+    func getRouteByRequest(_ req: Request) -> Route? {
+        let route =  self.routes[req.method]?.first(where: { route in
+//            print("seq: \(req.uri) \(route.path.string)")
+            return route.path.match(path: req.uri.pathComponents)
+        })
+        if (route != nil){
+            for p in route!.path {
+                switch p{
+                case.parameter(let param):
+                    req.parameter[param] = req.uri.pathComponents[(route?.path.firstIndex(of: p))!].description
+                default:
+                    break
+                }
+            }
+            return route
+        }
+        let nextUri = req.uri.pathComponents[0]
+        guard let router = self.routers[nextUri] else{
+            return nil
+        }
+        let newUri = "/"+Array(req.uri.pathComponents[1..<req.uri.pathComponents.count]).string
+        let newReq = Request(method: req.method, uri: newUri, body: req.body.data)
+        return router.getRouteByRequest(newReq)
+    }
+}

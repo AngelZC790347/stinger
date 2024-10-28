@@ -20,12 +20,11 @@ public struct ApplicationConfiguration{
     let addr:Addr
 }
 
-class Application{
-    var router:Router
-   
+class Application:Router{
+      
     var config:ApplicationConfiguration?
-    init(router: Router = Router()) {
-        self.router = router
+    override init() {
+        super.init()
     }
     func listen(config: ApplicationConfiguration) throws{
         let group = MultiThreadedEventLoopGroup(numberOfThreads: System.coreCount)

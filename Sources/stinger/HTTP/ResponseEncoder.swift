@@ -13,8 +13,7 @@ class ResponseEncoder:ChannelInboundHandler,RemovableChannelHandler{
     public typealias InboundIn = Response
     typealias OutboundOut = HTTPServerResponsePart
     func channelRead(context: ChannelHandlerContext, data: NIOAny) {
-        let res = self.unwrapInboundIn(data)
-        print(res.resposeType)        
+        let res = self.unwrapInboundIn(data)             
         var headers = HTTPHeaders()
                 headers.add(name: "Content-Type", value: "text/html")
         headers.add(name: "Content-Length", value: String(res.body.readableBytes))

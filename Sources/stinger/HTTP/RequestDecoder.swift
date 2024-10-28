@@ -19,9 +19,7 @@ class RequestDecoder:ChannelInboundHandler{
         guard case .head(let head) = part , head.method == .GET else {
             return
         }
-        print(head.method)
         req = Request(method: head.method, uri: head.uri)
-        print(req)
         context.fireChannelRead(wrapInboundOut(req))
 //        context.writeAndFlush(self.wrapOutboundOut(), promise: <#T##EventLoopPromise<Void>?#>)
 //        switch part{
